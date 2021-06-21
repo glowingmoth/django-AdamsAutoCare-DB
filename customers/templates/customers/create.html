@@ -1,14 +1,11 @@
-This needs to be the form to enter the customer Details
+{% extends 'customers/base.html' %}
 
-Customer details *MUST*:
+{% block content %}
+    <h3>Create Customer</h3>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit">
+    </form>
 
-First Name
-Last Name
-Phone
-
-Optional is everything else
-
-How to insert those details?
-
-How to make a form in django?
-How to prefill a form in django?
+{% endblock %}

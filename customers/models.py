@@ -1,5 +1,5 @@
 from django.db import models
-# from django.db.models.fields import CharField
+
 
 
 # Create your models here.
@@ -26,4 +26,6 @@ class Car(models.Model):
     model = models.CharField(max_length=30, blank=True, null=True)
     year = models.CharField(max_length=4, blank=True, null=True)
     rego = models.CharField(max_length=6, blank=True, null=True)
+
+
 

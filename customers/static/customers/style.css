@@ -30,6 +30,10 @@ h3 {
   margin-top: 0;
 }
 
+.nav {
+  margin-bottom: 50px;
+}
+
 table {
   border: 1px solid grey;
   width: 900px;
