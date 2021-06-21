@@ -3,12 +3,23 @@
 {% block content %}
     
     <div class="nav">
-        <a href="{% url 'index' %}">Back</a>
+        <a href="{% url 'index' %}">Back</a><p>Create New Customer</p>
     </div>
     <form action="" method="POST">
         {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit">
+        <div>
+            <p class="heading">Contact</p>
+            {{ customer_form.as_p}}
+        </div>
+        <div>
+            <p class="heading">Address</p>
+            {{ address_form.as_p }}
+        </div>
+        <div>
+            <p class="heading">Car</p>
+            {{ car_form.as_p }}
+        </div>
+        <input class="form-submit" type="submit">
     </form>
 
 {% endblock %}

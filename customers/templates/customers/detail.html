@@ -3,12 +3,12 @@
 {% block content %}
 
     <div class="nav">
-        <a href="{% url 'index' %}">Back</a>
+        <a href="{% url 'index' %}">Back</a><p>Customer Details</p>
     </div>
     
-    <div class="customer-details-wrapper">
+    <div class="details">
         <div class="customer-details">
-            <p class="category">Customer</p>
+            <p class="category">Contact</p>
             <p>{{customer.first_name}} {{customer.last_name}}</p>
             <p>{{customer.phone}}</p>
             <p>{{customer.email}}</p>
