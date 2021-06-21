@@ -1,0 +1,29 @@
+{% extends 'customers/base.html' %}
+
+{% block content %}
+<div class="customer-details-wrapper">
+    <div class="customer-details">
+        <p class="category">Customer</p>
+        <p>{{customer.first_name}} {{customer.last_name}}</p>
+        <p>{{customer.phone}}</p>
+        <p>{{customer.email}}</p>
+    </div>
+    <div class="customer-details">
+        <p class="category">Address</p>
+        <p>{{address.house_number}} {{address.street}}</p>
+        <p>{{address.suburb}}</p>
+        <p>{{address.city}}</p>
+    </div>
+    <div class="customer-details">
+        <p class="category">Vehicle</p>
+        <p>{{car.make}}</p>
+        <p>{{car.model}}</p>
+        <p>{{car.year}}</p>
+        <p>{{car.rego}}</p>
+    </div>
+    <button class="btn btn-edit">Edit</button>
+    <a href="{% url 'detail' customer.id %}"><button class="btn btn-delete">Delete</button></a>
+</div>
+    
+
+{% endblock %}
