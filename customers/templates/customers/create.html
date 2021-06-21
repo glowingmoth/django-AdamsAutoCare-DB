@@ -1,7 +1,10 @@
 {% extends 'customers/base.html' %}
 
 {% block content %}
-    <h3>Create Customer</h3>
+    
+    <div class="nav">
+        <a href="{% url 'index' %}">Back</a>
+    </div>
     <form action="" method="POST">
         {% csrf_token %}
         {{ form.as_p }}
