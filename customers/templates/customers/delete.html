@@ -1,0 +1,14 @@
+{% extends 'customers/base.html' %}
+
+{% block content %}
+    <a href="{% url 'detail' customer.id %}">Back</a>
+    <div class="warning">
+        <strong><p>WARNING!</p></strong>
+        <p>You just deleted <strong>({{ customer }} with the id {{ customer.id }})</strong> from the database.</p>
+        <p>If this was a mistake, please write down the details now. to make it easier to enter back into the databse.</p>
+
+        <p>Phone: {{ customer.phone }}</p>
+        <p>Email: {{ customer.email }}</p>
+        <a href="{% url 'index'%}"></a><button>Back</button>
+    </div>
+{% endblock %}

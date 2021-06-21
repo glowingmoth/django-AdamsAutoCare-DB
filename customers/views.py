@@ -32,5 +32,8 @@ def create(request):
     return render(request, 'customers/create.html', { "customer_form": customer_form, "address_form": address_form, "car_form": car_form })
 
 def delete(request, id):
-    remove_customer = Customer.objects.get(id=id).delete()
-    return render(request, 'customers/index.html')
+    customer = Customer.objects.get(id=id)
+    # Need to fix here
+    customer.delete()
+  
+    return render(request, 'customers/delete.html', { "customer": customer })

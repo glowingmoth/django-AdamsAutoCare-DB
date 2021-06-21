@@ -89,6 +89,9 @@ form {
   flex-direction: column;
   padding-bottom: 25px;
 }
+.warning {
+  color: palevioletred;
+}
 
 form p {
   display: flex;
