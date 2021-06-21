@@ -14,14 +14,14 @@ class Customer(models.Model):
         return self.first_name +" "+ self.last_name
 
 class Address(models.Model):
-    customer = models.ForeignKey(Customer, on_delete=models.CASCADE, null=True)
+    customer = models.ForeignKey(Customer, on_delete=models.CASCADE, blank=True, null=True)
     house_number = models.CharField(max_length=30, blank=True, null=True)
     street = models.CharField(max_length=30, blank=True, null=True)
     suburb = models.CharField(max_length=30, blank=True, null=True)
     city = models.CharField(max_length=30, blank=True, null=True)
     
 class Car(models.Model):
-    customer = models.ForeignKey(Customer, on_delete=models.CASCADE, null=True)    
+    customer = models.ForeignKey(Customer, on_delete=models.CASCADE, blank=True, null=True)    
     make = models.CharField(max_length=30, blank=True, null=True)
     model = models.CharField(max_length=30, blank=True, null=True)
     year = models.CharField(max_length=4, blank=True, null=True)
