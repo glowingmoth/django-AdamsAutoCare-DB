@@ -2,13 +2,12 @@
 
 {% block content %}
     <a href="{% url 'detail' customer.id %}">Back</a>
-    <div class="warning">
-        <strong><p>WARNING!</p></strong>
-        <p>You just deleted <strong>({{ customer }} with the id {{ customer.id }})</strong> from the database.</p>
-        <p>If this was a mistake, please write down the details now. to make it easier to enter back into the databse.</p>
+    <form action="" method="POST">
+      {% csrf_token %}
+      <strong><p>WARNING!</p></strong>
+      <p>Do you really want to delete <strong>{{ customer }}</strong> from the database?</p>
 
-        <p>Phone: {{ customer.phone }}</p>
-        <p>Email: {{ customer.email }}</p>
-        <a href="{% url 'index'%}"></a><button>Back</button>
-    </div>
+      <input type="submit" value="Yes"><a href="{% url 'index' %}">Cancel</a>
+    </form>
+   
 {% endblock %}
